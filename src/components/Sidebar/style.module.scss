@@ -5,8 +5,12 @@
   top: 0;
   left: 0;
   background-color: $secondary-color;
-  min-width: 18%;
+  min-width: 20%;
   height: 100vh;
   padding: 20px;
   font-size: 20px;
+
+  h4 {
+    padding-bottom: 30px;
+  }
 }
