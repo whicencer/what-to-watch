@@ -1,4 +1,4 @@
-import create from 'zustand';
+import { create } from 'zustand';
 import { IMovie } from '../models/IMovie';
 
 interface State {
