@@ -8,9 +8,16 @@
   min-width: 20%;
   height: 100vh;
   padding: 20px;
-  font-size: 20px;
+  font-size: 18px;
 
-  h4 {
+  h3 {
+    text-transform: uppercase;
     padding-bottom: 30px;
+    color: $light-grey;
+    font-weight: 700;
+
+    span {
+      color: $red;
+    }
   }
 }
