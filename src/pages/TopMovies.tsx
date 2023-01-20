@@ -15,7 +15,7 @@ const TopMovies = () => {
       <ul>
         {
           movies.map(movie => {
-            return <li>{movie.title}</li>
+            return <li key={movie.id}>{movie.title}</li>
           })
         }
       </ul>
