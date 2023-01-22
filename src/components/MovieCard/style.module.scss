@@ -1,0 +1,15 @@
+.movie {
+  margin: 15px 10px;
+  width: 11rem;
+  img {
+    width: 100%;
+    border-radius: 12px;
+  }
+  h3 {
+    width: 80%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 15px;
+  }
+}

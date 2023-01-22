@@ -1,12 +1,14 @@
 import React from 'react';
-import { Sidebar } from '../../components/Sidebar';
+import BurgerButton from '../../components/BurgerButton/BurgerButton';
+import NavMenu from '../../components/NavMenu/NavMenu';
 
 const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <div>
-      <Sidebar />
+    <>
+      <BurgerButton />
+      <NavMenu />
       { children }
-    </div>
+    </>
   );
 };
 
