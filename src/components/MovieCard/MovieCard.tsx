@@ -2,6 +2,8 @@ import React from 'react';
 import { IMovie } from '../../app/models/IMovie';
 import styles from './style.module.scss';
 
+
+// make hover effect menu
 const MovieCard: React.FC<{movie: IMovie}> = ({ movie }) => {
   const { poster_path, title } = movie;
   return (

@@ -11,11 +11,11 @@ const TopMovies = () => {
   }, [currentPage, fetchTopMovies]);
   
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <h2>Top rated</h2>
-      <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
+    <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+      <h2 style={{ margin: 10 }}>Top rated</h2>
+      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
         {
-          movies.filter((_, id) => id <= 4).map(movie => {
+          movies.map(movie => {
             return (
               <MovieCard key={movie.id} movie={movie} />
             );
