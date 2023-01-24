@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay } from 'swiper';
 import 'swiper/css';
 import MovieSlide from '../../components/MovieSlide/MovieSlide';
-import NavMenu from '../../components/NavMenu/NavMenu';
 
 const Home = () => {
   const { fetchTrendMovies, movies } = useTrendMovies();
