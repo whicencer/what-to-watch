@@ -11,7 +11,7 @@ const TopMovies = () => {
   }, [currentPage, fetchTopMovies]);
   
   return (
-    <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+    <div style={{ maxWidth: '920px', margin: '0 auto' }}>
       <h2 style={{ margin: 10 }}>Top rated</h2>
       <div style={{ display: 'flex', flexWrap: 'wrap' }}>
         {

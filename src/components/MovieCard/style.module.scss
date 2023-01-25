@@ -1,8 +1,14 @@
+@import '../../styles/variables.scss';
+
 .movie {
+  position: relative;
   margin: 15px 10px;
-  width: 11rem;
+  width: 10rem;
+  
   img {
+    transition: all .2s;
     width: 100%;
+    height: 89%;
     border-radius: 12px;
   }
   h3 {
@@ -11,5 +17,38 @@
     text-overflow: ellipsis;
     overflow: hidden;
     font-size: 15px;
+    margin-top: 7px;
+  }
+  
+  &:hover {
+    img {
+      transform: scale(1.05);
+    }
+    .movieHover {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.movieHover {
+  color: $light-grey;
+  transition: all .2s;
+  transform: scale(1.05);
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.808);
+  padding: 15px;
+  z-index: 1000;
+  width: 100%;
+  height: 89%;
+
+  p {
+    font-size: 13px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 85%;
   }
 }
