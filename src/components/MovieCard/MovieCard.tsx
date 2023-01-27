@@ -1,5 +1,6 @@
 import React from 'react';
 import { IMovie } from '../../app/models/IMovie';
+import { getMovieRateColor } from './MovieCard.utils';
 import styles from './style.module.scss';
 
 
@@ -7,11 +8,12 @@ import styles from './style.module.scss';
 const MovieCard: React.FC<{movie: IMovie}> = ({ movie }) => {
   const { poster_path, title, vote_average, release_date, overview } = movie;
   const releaseYear = release_date.toString().substring(0,4);
+  const rateColor = getMovieRateColor(vote_average);
 
   return (
     <div className={styles.movie}>
       <div className={styles.movieHover}>
-        <h2>{vote_average}</h2>
+        <h2 className={styles[rateColor]}>{vote_average.toFixed(1)}</h2>
         <h5>{releaseYear}</h5>
         <p>
           {overview.substring(0,100)}...

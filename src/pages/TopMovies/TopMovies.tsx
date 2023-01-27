@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useTopMovies } from '../../app/store/topMovies';
 import MovieCard from '../../components/MovieCard/MovieCard';
+import Pagination from '../../components/Pagination/Pagination';
 
 const TopMovies = () => {
-  const [ currentPage ] = useState(1);
-  const { fetchTopMovies, movies } = useTopMovies();
+  const [ currentPage, setCurrentPage ] = useState(500);
+  const { fetchTopMovies, movies, totalPages } = useTopMovies();
 
   useEffect(() => {
     fetchTopMovies(currentPage);
@@ -22,6 +23,7 @@ const TopMovies = () => {
           })
         }
       </div>
+      <Pagination setCurrentPage={setCurrentPage} currentPage={currentPage} totalPages={totalPages} />
     </div>
   );
 };

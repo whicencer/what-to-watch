@@ -32,6 +32,7 @@
 }
 
 .movieHover {
+  cursor: pointer;
   color: $light-grey;
   transition: all .2s;
   transform: scale(1.05);
@@ -52,3 +53,7 @@
     height: 85%;
   }
 }
+
+.badRate {color: $rate-bad;}
+.normalRate {color: $rate-normal;}
+.goodRate {color: $rate-good;}

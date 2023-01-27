@@ -1,0 +1,37 @@
+@import '../../styles/variables.scss';
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 50%;
+  margin: 15px auto;
+}
+
+.paginationButton {
+  transition: 0.5s;
+  cursor: pointer;
+  background-color: $red;
+  outline: none;
+  border: 0;
+  border-radius: 10px;
+  color: #fff;
+  padding: 15px;
+
+  font-size: 18px;
+
+
+  &:hover {
+    background-color: #FF1900;
+    box-shadow: 0 0 20px 5px rgba(255, 25, 0, 0.555);  
+  }
+
+  &:disabled {
+    background-color: transparent;
+    border: 1px solid rgb(46, 46, 46);
+
+    &:hover {
+      box-shadow: none;  
+    }
+  }
+}
