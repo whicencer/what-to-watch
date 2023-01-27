@@ -4,7 +4,7 @@ import MovieCard from '../../components/MovieCard/MovieCard';
 import Pagination from '../../components/Pagination/Pagination';
 
 const TopMovies = () => {
-  const [ currentPage, setCurrentPage ] = useState(500);
+  const [ currentPage, setCurrentPage ] = useState(1);
   const { fetchTopMovies, movies, totalPages } = useTopMovies();
 
   useEffect(() => {
