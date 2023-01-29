@@ -9,7 +9,7 @@ const Home = () => {
   const { fetchTrendMovies, movies } = useTrendMovies();
 
   useEffect(() => {
-    fetchTrendMovies();
+    fetchTrendMovies(1);
   }, [fetchTrendMovies]);
 
   SwiperCore.use([Autoplay]);

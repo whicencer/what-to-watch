@@ -2,6 +2,7 @@ import React from 'react';
 import { IMovie } from '../../app/models/IMovie';
 import Button from '../shared/Button/Button';
 import styles from './styles.module.scss';
+import {Link} from "react-router-dom";
 
 const MovieSlide: React.FC<{ movie: IMovie }> = ({ movie }) => {
   return (
@@ -11,9 +12,9 @@ const MovieSlide: React.FC<{ movie: IMovie }> = ({ movie }) => {
         <div style={{ maxWidth: '600px' }}>
           <h2>{movie.title}</h2>
           <p>{movie.overview}</p>
-          <div style={{ marginTop: '40px' }}>
-            <Button onClick={() => console.log(`see more ${movie.id}`)}>See more</Button>
-          </div>
+          <Link to={`/movie/${movie.id}`}>
+            <Button style={{ marginTop: '40px' }}>See more</Button>
+          </Link>
         </div>
         <img src={process.env.REACT_APP_IMDB_IMAGES+movie.poster_path} alt={movie.title} />
       </div>
