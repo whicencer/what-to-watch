@@ -5,17 +5,29 @@
   margin: 0 auto;
   padding: 0 20px;
   margin-top: 70px;
+}
 
-  img {
-    width: 350px;
-    height: 510px;
-    margin-left: 30px;
-    border-radius: 30px;
+.moviePoster {
+  width: 350px;
+  height: 510px;
+  margin-left: 30px;
+  border-radius: 30px;
+
+  @media screen and (max-width: 1010px) {
+    & {
+      display: none;
+    }
   }
 }
 
 .movieDetailsContent {
-  width: 55%;
+  width: 60%;
+
+  @media screen and (max-width: 1010px) {
+    & {
+      width: 100%;
+    }
+  }
 }
 
 .genreTag {
@@ -40,6 +52,7 @@
 }
 .castList {
   display: flex;
+  overflow: auto;
   margin-top: 15px;
 }
 .actor {

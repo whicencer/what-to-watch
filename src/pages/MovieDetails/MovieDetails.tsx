@@ -18,7 +18,7 @@ const MovieDetails = () => {
   return (
      <div className={styles.movieDetails}>
        <MovieDetailsInfo movie={movie} cast={cast} />
-       <img src={`${process.env.REACT_APP_IMDB_IMAGES}${movie?.poster_path || movie?.backdrop_path}`} alt={movie?.title} />
+       <img className={styles.moviePoster} src={`${process.env.REACT_APP_IMDB_IMAGES}${movie?.poster_path || movie?.backdrop_path}`} alt={movie?.title} />
      </div>
   );
 };
