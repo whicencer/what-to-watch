@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useTopMovies } from '../../app/store/topMovies';
 import MovieCard from '../../components/MovieCard/MovieCard';
 import Pagination from '../../components/Pagination/Pagination';
+import ContentContainer from "../../components/shared/ContentContainer";
 
 const TopMovies = () => {
   const [ currentPage, setCurrentPage ] = useState(1);
@@ -12,8 +13,8 @@ const TopMovies = () => {
   }, [currentPage, fetchTopMovies]);
   
   return (
-    <div style={{ maxWidth: '920px', margin: '0 auto' }}>
-      <h2 style={{ margin: 10 }}>Top rated</h2>
+    <ContentContainer>
+      <h2>Top rated</h2>
       <div style={{ display: 'flex', flexWrap: 'wrap' }}>
         {
           movies.map(movie => {
@@ -24,7 +25,7 @@ const TopMovies = () => {
         }
       </div>
       <Pagination setCurrentPage={setCurrentPage} currentPage={currentPage} totalPages={totalPages} />
-    </div>
+    </ContentContainer>
   );
 };
 

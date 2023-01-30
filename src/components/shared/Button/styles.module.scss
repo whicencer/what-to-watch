@@ -1,3 +1,5 @@
+@import '../../../styles/variables.scss';
+
 .button {
   cursor: pointer;
   border: 2px solid #fff;
@@ -15,5 +17,15 @@
     border-color: #FF1900;
     background-color: #FF1900;
     box-shadow: 2px 2px 35px 7px rgba(255, 25, 0, 0.753);  
+  }
+
+  &:disabled {
+    background-color: transparent;
+    border: 1px solid $grey;
+    color: $grey;
+
+    &:hover {
+      box-shadow: none;
+    }
   }
 }
