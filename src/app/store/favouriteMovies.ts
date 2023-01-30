@@ -20,4 +20,4 @@ export const useFavouriteMovies = create<IState>()(persist(set => ({
       return { favouriteMovies: state.favouriteMovies.filter(movie => movie.id !== movieId) };
     })
   }
-}), { name: 'favourites-storage', storage: createJSONStorage(() => sessionStorage) }));
+}), { name: 'favourites-storage', storage: createJSONStorage(() => localStorage) }));
