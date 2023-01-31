@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 import {IMovieCast, IMovieDetails} from "../../app/models/IMovieDetails";
 import styles from './styles.module.scss';
-import {fetchMovieCast, fetchMovieDetails} from "./MovieDetails.utils";
+import {fetchMovieCast, fetchMovieDetails} from "./MovieDetails.services";
 import MovieDetailsInfo from "./MovieDetailsInfo";
 
 const MovieDetails = () => {

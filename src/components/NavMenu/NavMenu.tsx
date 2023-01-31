@@ -16,6 +16,10 @@ const links: { to: string, title: string }[] = [
     to: '/favourite',
     title: 'Favourite'
   },
+  {
+    to: '/search',
+    title: 'Search'
+  }
 ];
 
 const NavMenu = () => {

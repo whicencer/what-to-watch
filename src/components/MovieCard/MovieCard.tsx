@@ -8,7 +8,7 @@ import {Link} from "react-router-dom";
 // make hover effect menu rate color (green, red, yellow)
 const MovieCard: React.FC<{movie: IMovie}> = ({ movie }) => {
   const { poster_path, title, vote_average, release_date, overview } = movie;
-  const releaseYear = release_date.toString().substring(0,4);
+  const releaseYear = release_date?.toString().substring(0,4);
   const rateColor = getMovieRateColor(vote_average);
 
   return (
